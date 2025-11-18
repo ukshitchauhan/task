@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <button id="openAddUser" class="add-user-btn">
+        Add User
+    </button>
+
+    <!-- Add User Popup -->
+    <div id="addUserPopup" class="popup hidden">
+        <div class="popup-box">
+            <h2 class="title">Add New User</h2>
+
+            <form id="addUserForm" class="form">
+                <input type="text" placeholder="Enter Name" required>
+                <input type="text" placeholder="Bio" required>
+                <input type="url" placeholder="Profile Image URL" >
+
+                <div class="btns">
+                    <button type="button" id="cancelBtn">Cancel</button>
+                    <button type="submit">Add User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-10 items-center">
+        <input class="inp px-5 py-3 rounded outline-none bg-[#111] text-[#888]" type="text" placeholder="Search...">
+        <p class="error text-red-500 text-xl font-semibold">No user found!</p>
+        <div class="cards grid grid-cols-5 gap-10">      
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
